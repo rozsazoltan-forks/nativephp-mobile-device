@@ -23,7 +23,7 @@ use Native\Mobile\Facades\Device;
 Device::vibrate();
 
 // Toggle flashlight
-$result = Device::toggleFlashlight();
+$result = Device::flashlight();
 // Returns: ['success' => true, 'state' => true|false]
 
 // Get device ID
@@ -48,7 +48,7 @@ import { Device } from '#nativephp';
 await Device.vibrate();
 
 // Toggle flashlight
-const flashResult = await Device.toggleFlashlight();
+const flashResult = await Device.flashlight();
 console.log('Flashlight state:', flashResult.state);
 
 // Get device ID
@@ -74,7 +74,7 @@ Vibrate the device.
 
 **Returns:** `{ success: true }`
 
-### `toggleFlashlight(): array`
+### `flashlight(): array`
 
 Toggle the device flashlight on/off.
 
